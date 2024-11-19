@@ -18,3 +18,17 @@ print(car_dataset.Fuel_Type.value_counts())
 print(car_dataset.Seller_Type.value_counts())
 print(car_dataset.Transmission.value_counts())
  
+car_dataset.replace({'Fuel_Type':{'Petrol':0, 'Diesel':1, 'CNG':2}},inplace=True)
+car_dataset.replace({'Seller_Type':{'Dealer':0,'Individual':1}},inplace=True)
+car_dataset.replace({'Transmission':{'Manual':0,'Automatic':1}},inplace=True)
+car_dataset.head() 
+car_dataset.head()
+
+X = car_dataset.drop(['Car_Name','Selling_Price'],axis=1)
+Y = car_dataset['Selling_Price']
+print(X)
+
+print(Y)
+
+X_train, X_test, Y_train, Y_test = train_test_split(X,Y,test_size=0.1,random_state=2)
+ 

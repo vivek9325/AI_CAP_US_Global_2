@@ -71,3 +71,39 @@ classifier.fit(X_train,Y_train) by Vivek
 Vivek
 classifier.fit(X_train,Y_train)
 has context menu
+
+
+X_train_prediction = classifier.predict(X_train)
+training_data_accuracy = accuracy_score(X_train_prediction, Y_train)
+print(training_data_accuracy) by Vivek
+3:50 AM
+Vivek
+print(training_data_accuracy)
+X_test_prediction = classifier.predict(X_te... by Vivek
+3:50 AM
+Vivek
+X_test_prediction = classifier.predict(X_test)
+test_data_accuracy = accuracy_score(X_test_prediction, Y_test)
+print(test_data_accuracy) by Vivek
+3:51 AM
+Vivek
+print(test_data_accuracy)
+input_data = (5,166,72,19,175,25.8,0.587,51... by Vivek
+3:51 AM
+Vivek
+input_data = (5,166,72,19,175,25.8,0.587,51)
+input_data_as_numpy_array = np.asarray(input_data)
+input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
+std_data = scaler.transform(input_data_reshaped)
+print(std_data)
+prediction = classifier.predict(std_data)
+print(prediction)
+if(prediction[0]==0):
+  print('No Diabetic')
+else:
+  print('Diabetic')
+ 
+has context menu
+
+
+has context menu

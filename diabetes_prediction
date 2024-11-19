@@ -17,3 +17,57 @@ diabetes_dataset.describe()
 diabetes_dataset['Outcome'].value_counts()
 
 diabetes_dataset.groupby('Outcome').mean()
+
+X = diabetes_dataset.drop(columns='Outcome', axis=1)
+Y = diabetes_dataset['Outcome']
+print(X) by Vivek
+3:33 AM
+Vivek
+print(X)
+print(Y) by Vivek
+3:33 AM
+Vivek
+print(Y)
+scaler = StandardScaler() by Vivek
+3:33 AM
+Vivek
+scaler = StandardScaler()
+scaler.fit(X) by Vivek
+3:34 AM
+Vivek
+scaler.fit(X)
+standardized_data = scaler.transform(X) by Vivek
+3:34 AM
+Vivek
+standardized_data = scaler.transform(X)
+print(standardized_data) by Vivek
+3:34 AM
+Vivek
+print(standardized_data)
+X = standardized_data Y = diabetes_dataset[... by Vivek
+3:34 AM
+Vivek
+X = standardized_data
+Y = diabetes_dataset['Outcome']
+print(X) print(Y) by Vivek
+3:34 AM
+Vivek
+print(X)
+print(Y)
+X_train, X_test, Y_train, Y_test = train_te... by Vivek
+3:34 AM
+Vivek
+X_train, X_test, Y_train, Y_test = train_test_split(X,Y,test_size=0.2, stratify=Y, random_state=2)
+print(X.shape, X_train.shape, X_test.shape) by Vivek
+3:34 AM
+Vivek
+print(X.shape, X_train.shape, X_test.shape)
+classifier = svm.SVC(kernel= 'linear' ) by Vivek
+3:34 AM
+Vivek
+classifier = svm.SVC(kernel='linear')
+classifier.fit(X_train,Y_train) by Vivek
+3:34 AM
+Vivek
+classifier.fit(X_train,Y_train)
+has context menu
